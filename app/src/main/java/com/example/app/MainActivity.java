@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     TextView welcomeMessage, logInText, welcomeText, registerText, fPassText;
     String email = "admin";
     String password = "admin";
-    ImageView showPassword;
     boolean isPasswordVisible = false;
 
     @Override
@@ -106,20 +105,7 @@ public class MainActivity extends AppCompatActivity {
                     passwordEditText.setText("");
                 }
             });
-            showPassword.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (isPasswordVisible) {
-                        passwordEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                        showPassword.setImageResource(R.drawable.ic_launcher_background);
-                    } else {
-                        passwordEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
-                        showPassword.setImageResource(R.drawable.ic_launcher_foreground);
-                    }
-                    isPasswordVisible = !isPasswordVisible;
-                    passwordEditText.setSelection(passwordEditText.getText().length());
-                }
-            });
+
 
             return insets;
         });
