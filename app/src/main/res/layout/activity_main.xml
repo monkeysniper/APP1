@@ -20,7 +20,15 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button" />
+        app:layout_constraintTop_toBottomOf="@id/button"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/orange"
+        android:text="  Нажми сюда"
+        app:layout_constraintStart_toEndOf="@id/fPassText"
+        app:layout_constraintTop_toTopOf="@id/fPassText"
+        app:layout_constraintBottom_toBottomOf="@id/fPassText"
 
     <Button
         android:id="@+id/button"
